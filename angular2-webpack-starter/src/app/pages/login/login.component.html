@@ -1,0 +1,15 @@
+<!--  LOGIN  -->
+<div id="login" class="login" data-src="assets/img/big-images/img1.jpg" background>
+    <div [ngClass]="errorLogin" class="error">Error: Username or password is incorrect</div>
+    <!--  CIRCLE  -->
+    <form class="circle" name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm">
+        <div class="login-title left">
+            <span>Courses</span>
+            <input class="login__input" type="text" name="username" [(ngModel)]="model.username" #username="ngModel" required>
+            <input class="login__input" type="password" name="password" [(ngModel)]="model.password" #password="ngModel" required>
+        </div>
+        <button class="button-down">Join</button>
+    </form>
+    <!--  //CIRCLE  -->
+</div>
+<!--  //LOGIN  -->

@@ -20,15 +20,21 @@ import {
  */
 import { ENV_PROVIDERS } from './environment';
 import { ROUTES } from './app.routes';
+
+// Directives
+import { BackgroundDirective } from './directives/background';
+
 // App is our top level component
 import { AppComponent } from './app.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
 import { CoursesComponent } from './pages/courses';
+import { LoginComponent } from './pages/login';
 import { FooterComponent } from './components/footer';
 import { FilterComponent } from './components/filter';
 import { MenuComponent } from './components/menu';
 import { NoContentComponent } from './no-content';
+import { AuthenticationService } from './services/index';
 
 import '../styles/styles.scss';
 import '../styles/headings.css';
@@ -53,10 +59,12 @@ type StoreType = {
   declarations: [
     AppComponent,
     CoursesComponent,
+    LoginComponent,
     FooterComponent,
     FilterComponent,
     MenuComponent,
-    NoContentComponent
+    NoContentComponent,
+    BackgroundDirective
   ],
   imports: [ // import Angular's modules
     BrowserModule,
@@ -65,6 +73,7 @@ type StoreType = {
     RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules })
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
+    AuthenticationService,
     ENV_PROVIDERS,
     APP_PROVIDERS
   ]
