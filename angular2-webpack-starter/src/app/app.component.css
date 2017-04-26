@@ -29,3 +29,34 @@ h1, h2, h3, h4, h5, h6{
 strong{
 	font-weight: 900;
 }
+
+[hidden] {
+  display: none !important;
+}
+
+.error {
+	position: absolute;
+	left: 50%;
+	top: 50px;
+	border: 1px solid #ebccd1;
+	width: 300px;
+	padding: 15px;
+	background: #f2dede;
+	margin-left: -150px;
+}
+	.error.hide {
+		display: none;
+	}
+
+/*----------  RIGHT CONTENT  ----------*/
+.right-content{
+	position: relative;
+	height: 100%;
+
+    -moz-transition: all 0.3s linear;
+	-webkit-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+	-ms-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+}
+/*----------  //RIGHT CONTENT  ----------*/

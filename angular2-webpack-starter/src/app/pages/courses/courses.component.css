@@ -1,24 +1,10 @@
-/*----------  RIGHT CONTENT  ----------*/
-.right-content{
-	margin-left: 280px;
-	position: relative;
-	height: 100%;
 
-    -moz-transition: all 0.3s linear;
-	-webkit-transition: all 0.3s linear;
-	-o-transition: all 0.3s linear;
-	-ms-transition: all 0.3s linear;
-	transition: all 0.3s linear;
-}
 
 /*----------  PORTFOLIO  ----------*/
 .portfolio{
 	overflow: hidden;
 	background: #1A1A1A;
-	bottom: 0;
-	right: 0;
-	top: 0;
-	left: 0;
+	margin-left: 280px;
 	z-index: 2;
 
     -moz-transition: all 0.5s ease;
@@ -93,6 +79,7 @@
 		position: relative;
 		width: 100%;
 		z-index: -1;
+		vertical-align: middle;
 		
 	    -moz-transform: scale(1, 1);
 	    -webkit-transform: scale(1, 1);
@@ -403,4 +390,3 @@
 	}
 	/*----------  //SCROLLER  ----------*/
 /*----------  //PORTFOLIO  ----------*/
-/*----------  //RIGHT CONTENT  ----------*/
